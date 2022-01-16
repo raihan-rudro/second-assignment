@@ -52,16 +52,16 @@ body{
 
     
 }
-.left-menu>ul {
+.right-menu>ul {
     display:flex;
     align-items: center;
     list-style: none;
     justify-content: space-between;
 }
-.left-menu>ul>li{
+.right-menu>ul>li{
     margin-left: 20px;
 }
-.left-menu>ul>li>a{
+.right-menu>ul>li>a{
     text-decoration: none;
     color:white;
 }
@@ -246,5 +246,95 @@ cursor: pointer;
 }
 .footer h2{
     padding-top:25px;
+}
+
+/* media query  */
+
+@media only screen and (max-width:688px){
+    .right-menu{
+        display: none;
+        position: absolute;
+    }
+    .navigation{
+        display: block;
+    }
+    .company-name{
+        text-align: center;
+        font-size:40px;
+        padding-top:5px;
+    }
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner>.banner-right{
+        order:1;
+    }
+    .banner>.banner-left{
+        order:2;
+    }
+    .banner-left h1{
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 40px;
+        color:rgb(105, 152, 171);
+    }
+    .container{
+        width:100%;
+    }
+    .popular-item-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:15px;
+        
+        padding:25px 15px 25px 15px;}
+
+
+    .brand-item-container{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 20px;
+            margin:50px 0 0 0;
+            justify-items: center;
+            padding-bottom: 60px;
+          
+        }
+       
+        
+
+}
+
+@media only screen and (min-width:688px) and (max-width:992px){
+    .banner-left h1{
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 40px;
+        color:rgb(105, 152, 171);
+    }
+    .banner-right:hover .photo-detail{
+        visibility: visible;
+        transform: translate(-50px,-70px);
+        transition:  transform .3s ease .7s ;
+    
+      
+     
+    }
+    .popular-item-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+        padding:25px 15px 25px 15px;
+        }
+
+        .brand-item-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            row-gap: 20px;
+            margin:50px 0 0 0;
+            justify-items: center;
+            padding-bottom: 60px;
+          
+        }
+
 }
 
